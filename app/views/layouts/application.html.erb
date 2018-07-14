@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Asagao</title>
+    <title><%= page_title %></title>
+    <meta charset="utf-8" />
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div id="container">
+      <div id="header">
+        <%= render "shared/header" %>
+      </div>
+      <div id="content">
+        <%= yield %>
+      </div>
+      <div id="sidebar">
+        <%= render "shared/sidebar" %>
+      </div>
+      <div id="footer">
+        <%= render "shared/footer"%>
+      </div>
+    </div>
   </body>
 </html>
