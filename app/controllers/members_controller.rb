@@ -9,6 +9,7 @@ class MembersController < ApplicationController
   end
 
   def new
+    @member = Member.new(birthday: Date.new(1980, 1, 1)) #作成時の誕生日初期値を1980/01/01にした状態で新たなオブジェクトを作成します
   end
 
   def edit
